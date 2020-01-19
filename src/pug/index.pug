@@ -1,0 +1,391 @@
+doctype html
+
+head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='author', content='Bruno Carvalho Feitosa')
+    meta(name='description', content='Landing Page do tênis Air Max 270 Hot Punch, criação para portfólio e aprendizado em HTML5, PUG, CSS3, SASS, JS, JQuery, GULP')
+    link(rel='stylesheet', type='text/css' href='css/styleDesktop.css')
+    link(rel='stylesheet', type='text/css' href='css/styleMobile.css')
+    link(rel='stylesheet', type='text/css' href='css/styleAos.css')
+    link(rel='icon', type='image/png' href='assets/images/fav.png')
+    title Nike Air Max 270 Hot Punch
+
+body
+
+    <!-- Container -->
+    div.x-container
+       
+       <!-- Promoção -->
+       div.x-content-Promotion
+         img(src='assets/images/product.png', title='Nike', alt='Air Max 270 Hot Punch')
+         h1#info-product Air Max 270 Hot Punch - R$599,99
+         <!-- Barra de progresso -->   
+         div.x-progress-Container
+          div.x-progress-bar#page-ProgressBar
+
+       <!-- Carrinho -->
+       div.x-shopping-Cart
+        img#image-close-cart(src='assets/images/iconClose.png', alt='Fechar carrinho')
+
+        <!-- Formulário -->
+        div.x-cart
+         p#text-title-details Detalhes do cartão
+         img(src='assets/images/iconMasterCard.png', alt='MasterCard')
+
+         form(name='formSend', id='formSend', action='')
+          table
+            tr
+              td
+                label(for='name', class='text-title') Nome Completo
+            
+            tr
+              td
+                input(type='text', id='name', class='fields', placeholder='Nome', maxlength='75' autocomplete='off')
+            
+            tr
+              td
+                label(for='card', class='text-title') Número do Cartão
+            
+            tr
+              td
+                input(type='text', id='card', class='fields', placeholder='Número', maxlength='16', autocomplete='off')
+ 
+            tr
+              td
+                label(for='expiration', class='text-title') Expiração do Cartão
+            
+            tr
+              td
+                input(type='text', id='expiration', class='fields', placeholder='Expiração', maxlength='5', autocomplete='off')
+ 
+            tr
+              td
+                label(for='cvv', class='text-title') CVV
+            
+            tr
+              td
+                input(type='text', id='cvv', class='fields', placeholder='CVV', maxlength='4', autocomplete='off')
+
+            tr
+              td
+                input(type='submit', id='btn-next' value='Comprar') 
+        
+         <!-- Total -->
+         div.x-total
+          hr.line
+          p#title-total Total da Compra
+          p#total 0,00            
+
+       <!-- Carrinho de Compras -->
+       div.x-bag
+        div.x-message-buy
+         img(src='assets/images/iconBox.png' id="icon-box")
+         p.message Seu carrinho está vazio arraste produtos para cá.  
+         li
+      
+       <!-- Página Central -->
+       div.x-central-Content
+        <!-- Menú -->   
+        div.x-content-Menu
+         <!-- Logomarca -->
+         div.x-brand
+          img(src='assets/images/brand.png' alt='Nike')
+         <!-- Departamentos -->
+         nav
+          ul#menu
+           li 
+            img#image-search(src='assets/images/iconSearch.png', alt='Pesquisar...')
+           li
+            img#image-bag(src='assets/images/iconBag.png', alt='Sacola de compras')
+           li 
+            div#count-bag
+             label#count 0
+        
+        <!-- Apresentação Produto -->
+        div.x-content-Product
+         <!-- Slide Produto -->
+         div.x-content-slide-product
+          ul#slide(data-aos='flip-up', data-aos-duration='3000')
+           li
+            a(href='assets/images/product01.png', alt='Air Max 270 Hot Punch', target='x-box-product')
+             img(src='assets/images/thumbnail01.png', alt='Air Max 270 Hot Punch')
+           li
+            a(href='assets/images/product02.png', alt='Air Max 270 Hot Punch', target='x-box-product')
+             img(src='assets/images/thumbnail02.png', alt='Air Max 270 Hot Punch')
+           li
+            a(href='assets/images/product03.png', alt='Air Max 270 Hot Punch', target='x-box-product')
+             img(src='assets/images/thumbnail03.png', alt='Air Max 270 Hot Punch')
+           li
+            a(href='assets/images/product04.png', alt='Air Max 270 Hot Punch', target='x-box-product')
+             img(src='assets/images/thumbnail04.png', alt='Air Max 270 Hot Punch')
+          
+          div.x-box-product(data-aos='fade-up-right', data-aos-duration='2500')
+           img(src='assets/images/product01.png', alt='Air Max 270 Hot Punch')
+
+          <!-- Descrição Produto -->
+          div.x-content-description-product
+           h2#text-name-product(data-aos='fade-up-right', data-aos-duration='2500') Air Max 270 Hot Punch
+           h3#text-description-product(data-aos='fade-up', data-aos-duration='2500') O Air Max 270 é um tênis totalmente disruptivo e contemporâneo,
+            | é o tênis que esta na moda e no pé de toda pessoa que preza pela qualidade e conforto.
+            | Este tênis foi projetado para ser utilizado a qualquer dia e qualquer lugar, suas molas
+            | possuem uma bolha de ar projetada para aguentar fortes impactos, utilize este tênis para
+            | trabalhar, caminhar, correr, pular,dançar e se divertir sem o incômodo de dores nos pés.
+            | Este tênis foi testado por milhares de ortopedistas espelhados pelo mundo e foi confirmada
+            | a eficácia e a beneficência do Air Max 270, ele realmente é o tênis mais confortável da
+            | categoria.
+           h4#text-price-product(data-aos='fade-right', data-aos-duration='1800') R$599,99
+
+        <!-- Zoom Produto -->
+        div.x-content-zoom1-Product
+         p#text-air-max(data-aos='fade-left', data-aos-duration='2600') Air
+          p.ityped(data-aos='fade-left', data-aos-duration='2600')
+
+           div.x-air-max
+            div.x-air-max-glass(data-aos='fade-left', data-aos-duration='2600')
+             img#airOne(src='assets/images/airMax01.png', alt='Air Max 270 Hot Punch')
+
+            div.x-air-max-instruction(data-aos='fade-up', data-aos-duration='2000')
+             img.x-icon-sides(src='assets/images/iconSides.png', alt='Passe o mouse sobre o espelho')
+             p#text-instruction Passe o mouse
+
+        <!-- Galeria -->
+        div.x-gallery-Product
+         div.x-grid-gallery
+          div.x-grid-item-gallery(data-aos='flip-left', data-aos-duration='2500')
+           img#image-gallery-one(src='assets/images/pictureAirMax01.jpg', alt='Air Max 270 Hot Punch')
+          div.x-grid-item-gallery(data-aos='flip-up', data-aos-duration='2500')
+           img#image-gallery-two(src='assets/images/pictureAirMax02.jpg', alt='Air Max 270 Hot Punch')
+          div.x-grid-item-gallery
+           img#image-gallery-three(src='assets/images/pictureAirMax03.jpg', alt='Air Max 270 Hot Punch')
+
+        <!-- Zoom Produto -->
+        div.x-content-zoom2-Product
+         p#text-air-max(data-aos='fade-left', data-aos-duration='2600') Air
+          p.ityp(data-aos='fade-left', data-aos-duration='2600')
+
+           div.x-air-max
+            div.x-air-max-glass(data-aos='fade-left', data-aos-duration='2600')
+             img#airTwo(src='assets/images/airMax02.png', alt='Air Max 270 Hot Punch')
+
+            div.x-air-max-instruction(data-aos='fade-up', data-aos-duration='2000')
+             img.x-icon-sides(src='assets/images/iconSides.png', alt='Passe o mouse sobre o espelho')
+             p#text-instruction Passe o mouse
+        
+        <!-- Avaliações -->
+        div.x-content-avaliations-Product
+         div.x-avaliations
+          div.x-rating
+           p#text-total-rating 9.9
+           p#text-star-rating &#9733;&#9733;&#9733;&#9733;&#9733;
+           p#text-comments-rating 100 comentários
+
+          div.x-progress-clients
+           div.x-progress
+            p.text-star 5 estrelas
+            p.text-total-star 99
+
+            div.x-bar
+             div.x-level-bar(style='width: 99%')
+           
+           div.x-progress
+            p.text-star 4 estrelas
+            p.text-total-star 1
+
+            div.x-bar
+             div.x-level-bar(style='width: 1%')
+
+           div.x-progress
+            p.text-star 3 estrelas
+            p.text-total-star 0
+
+            div.x-bar
+             div.x-level-bar(style='width: 0%')
+
+           div.x-progress
+            p.text-star 2 estrelas
+            p.text-total-star 0
+
+            div.x-bar
+             div.x-level-bar(style='width: 0%')
+
+           div.x-progress
+            p.text-star 1 estrela
+            p.text-total-star 0
+
+            div.x-bar
+             div.x-level-bar(style='width: 0%')
+
+           p#text-percent 99%
+           p#text-clients dos nossos clientes recomendam
+
+         <!-- Comentários Clientes -->
+         div.x-comments
+          nav
+           ul
+
+            <!-- Relevantes -->
+            li
+             input(type='radio', name='navegation', class='navegation', id='relevant', checked='true')
+             label(for='relevant') Relevante
+
+             div.x-content-comments
+              p.text-star &#9733;&#9733;&#9733;&#9733;&#9733;
+              p.text-title Espetáculo de tênis
+              p.text-comment Tênis super confortável e bonito, utilizo em qualquer lugar. Vale cada centavo que foi pago.
+              p.text-name-client Enviado por Bruno
+              hr.line
+
+              p.text-star &#9733;&#9733;&#9733;&#9733;&#9733;
+              p.text-title Design maravilhoso
+              p.text-comment Tênis com um design lindo, o Air Max mais bonito que já vi até agora.
+              p.text-name-client Enviado por BrunoCarvalho
+              hr.line
+
+              p.text-star &#9733;&#9733;&#9733;&#9733;&#9733;
+              p.text-title O mais confortável
+              p.text-comment A palmilha deste tênis é muito espessa, você nem sente o chão ao pisar, o melhor de todos.
+              p.text-name-client Enviado por BrunoCarvalhoFeitosa
+              hr.line
+
+            <!-- Úteis -->
+            li
+             input(type='radio', name='navegation', class='navegation', id='util')
+             label(for='util') Úteis
+
+             div.x-content-comments
+              p.text-star &#9733;&#9733;&#9733;&#9733;&#9733;
+              p.text-title Alta qualidade
+              p.text-comment Qualidade muito boa, porém estou acostumado com cadarços para amarrar, ele possui velcro.
+              p.text-name-client Enviado por BrunoFeitosaCarvalho
+              hr.line
+
+              p.text-star &#9733;&#9733;&#9733;&#9733;&#9733;
+              p.text-title Não tem mau odor
+              p.text-comment Comprei há dois mês e o utilizo bastante desde então, até agora não há nenhum mal odor.
+              p.text-name-client Enviado por Carvalho
+              hr.line
+
+              p.text-star &#9733;&#9733;&#9733;&#9733;&#9733;
+              p.text-title Leve, mas muito resistente
+              p.text-comment Qualidade muito boa, porém estou acostumado com cadarços para amarrar, ele possui velcro.
+              p.text-name-client Enviado por Feitosa
+              hr.line
+
+            <!-- Recentes -->
+            li
+             input(type='radio', name='navegation', class='navegation', id='recent')
+             label(for='recent') Recentes
+
+             div.x-content-comments
+              p.text-star &#9733;&#9733;&#9733;&#9733;
+              p.text-title Preço muito caro
+              p.text-comment Pelo que pesquisei é um modelo raro e importado, está caro mas vale a pena a compra.
+              p.text-name-client Enviado por CarvalhoFeitosa
+              hr.line
+
+              p.text-star &#9733;&#9733;&#9733;&#9733;&#9733;
+              p.text-title Juntando dinheiro
+              p.text-comment Venho fazendo economias há dois meses para comprá-lo, gostei muito deste design.
+              p.text-name-client Enviado por FeitosaCarvalho
+              hr.line
+
+              p.text-star &#9733;&#9733;&#9733;&#9733;&#9733;
+              p.text-title Demorou para chegar
+              p.text-comment Demorou vinte dias para chegar, pois veio importado, agora que chegou vou usá-lo.
+              p.text-name-client Enviado por FeitosaBruno
+              hr.line
+
+        <!-- Sobre -->
+        div.x-about1-Product
+         p.text-row-about(data-aos='fade-right', data-aos-duration='2500') O Tênis Masculino Nike Air Max 270 é inspirado nos dois ícones do grande Air: Air Max 180 
+            | e Air Max 93. Ele apresenta o maior amortecimento Air no calcanhar da Nike para uma pisada
+            | super macia que é tão impossível quanto parece. A construção de camada interna do tênis é
+            | firme e se flexiona com o seu pé. Ela é feita com áreas sólidas e mesh, proporcionando 
+            | estrutura e ventilação onde você mais precisa.
+         div.x-grid-about
+          div.x-grid-item-about 
+           p.text-col-about(data-aos='fade-right', data-aos-duration='2500') O amortecimento Air-Sole revolucionário da Nike foi introduzido
+               | nos calçados Nike em 1978. Em 1987, o Nike Air Max 1 foi lançado com ar visível no calcanhar,
+               | permitindo aos fãs mais do que apenas a sensação de conforto do amortecimento Air-Sole. De 
+               | repente, era possível enxergá-lo. Desde então, a próxima geração de tênis Nike Air Max se 
+               | tornou um sucesso.
+          div.grid-item-about
+           p.text-col-about(data-aos='fade-left', data-aos-duration='2500') A construção de botinha do tênis é firme e se flexiona com o seu pé.
+               | Ela é feita com áreas sólidas e de mesh, proporcionando a estrutura e a ventilação onde você
+               | mais precisa. Um solado de espuma de dupla densidade e a unidade Air Max no calcanhar proporcionam 
+               | amortecimento macio para conforto casual, o dia todo. Isso evita dores e lesões.
+         img(src='assets/images/product05.png', alt='Air Max 270 Hot Punch', data-aos='fade-left', data-aos-duration='1800')
+
+        <!-- Sobre -->
+        div.x-about2-Product
+         div.x-more-details(data-aos='fade-left', data-aos-duration='2000')
+          ul
+           li Cabedal de mesh e sintético para conforto e suporte.
+           li Ranhuras profundas no solado permitem que o seu pé se curve naturalmente.
+           li Cadarço assimétrico para um ajuste seguro.
+           li Apoio interno de plástico estabiliza o seu pé.
+           li Alça no calcanhar para fácil colocação e retirada.
+           li Solado de borracha sólida no antepé, borracha clara no calcanhar.
+           li Ultra confortável devido ao sistema de amortecimento em ar.
+           li Menos impacto e mais compacto, um tênis leve e resistente.
+           li Formato anatômico que proporciona conforto na corrida.
+           li O tênis mais confortável da categoria, veja e comprove.
+         img(src='assets/images/product03.png', alt='Air Max 270 Hot Punch', data-aos='fade-right', data-aos-duration='1800')
+
+        <!-- Slide -->
+        div.x-touch-slide-Product
+         div.x-wrap-product
+
+          a.x-block-product
+           div.x-product
+            img(src='assets/images/product01.png', alt='Air Max 270 Hot Punch')
+          
+          a.x-block-product
+           div.x-product
+            img(src='assets/images/product02.png', alt='Air Max 270 Hot Punch')
+
+          a.x-block-product
+           div.x-product
+            img(src='assets/images/product03.png', alt='Air Max 270 Hot Punch')
+
+          a.x-block-product
+           div.x-product
+            img(src='assets/images/product04.png', alt='Air Max 270 Hot Punch')
+
+          a.x-block-product
+           div.x-product
+            img(src='assets/images/product05.png', alt='Air Max 270 Hot Punch')
+
+          a.x-block-product
+           div.x-product
+            img(src='assets/images/product06.png', alt='Air Max 270 Hot Punch')
+
+        footer.x-Footer
+         img(src='assets/images/brand.png', title='Nike' alt='Nike', data-aos='fade-left', data-aos-duration='3000')
+         p.text-footer(data-aos='fade-right', data-aos-duration='3000') Nike do Brasil - CNPJ: 59.546.515/0001-34.
+         p.text-footer(data-aos='fade-right', data-aos-duration='3000') Rua Werner Siemens, 111 - CEP 05069-010, SP.
+         p.text-footer(data-aos='fade-right', data-aos-duration='3000') © 2019 Nike. Todos os direitos reservados.
+         hr.line
+
+         div.x-developer
+          p
+           a(href='https://www.linkedin.com/in/bruno-carvalho-feitosa', target='_blank') Desenvolved by Bruno Carvalho Feitosa.
+
+    script(type='text/javascript', src='js/jquery.js')
+    script(type='text/javascript', src='js/jquery.loader.js')
+    script(type='text/javascript', src='js/jquery.openCart.js')
+    script(type='text/javascript', src='js/jquery.mask.js')
+    script(type='text/javascript', src='js/jquery.maskField.js')
+    script(type='text/javascript', src='js/jquery.scrollWindow.js')
+    script(type='text/javascript', src='js/jquery.sliderProduct.js')
+    script(type='text/javascript', src='js/jquery.ityped.js')
+    script(type='text/javascript', src='js/jquery.effectLetter.js')
+    script(type='text/javascript', src='js/jquery.zoomImage.js')
+    script(type='text/javascript', src='js/jquery.animationFade.js')
+    script(type='text/javascript', src='js/jquery.sliderTouch.js')
+    script(type='text/javascript', src='js/jquery-ui.js')
+    script(type='text/javascript', src='js/jquery.draggableCart.js')
+       
+        
+

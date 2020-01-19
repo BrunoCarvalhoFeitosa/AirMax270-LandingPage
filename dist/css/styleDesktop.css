@@ -1,0 +1,1049 @@
+@charset "UTF-8";
+/* Importação de Fontes */
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anton");
+/* Formatação Global */
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth; }
+
+/* Cores */
+:root {
+  --mainDarker: #000;
+  --mainDark: #2C2C2C;
+  --mainDarkness: #4B4B4B;
+  --mainLightGray: #CCC;
+  --mainBoldGray: #777;
+  --mainSnow: #FFF;
+  --mainRed: #FF6A6A; }
+
+/* Barra de Rolagem Largura */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Barra de Rolagem Fundo */
+::-webkit-scrollbar-track {
+  background: #AAA; }
+
+/* Barra de Rolagem Índice */
+::-webkit-scrollbar-thumb {
+  background: #666; }
+
+/* Loader */
+.pace {
+  pointer-events: none;
+  -webkit-pointer-events: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none; }
+  .pace .pace-activity {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 350px;
+    background: #666;
+    transform: translateX(100%) translateY(-100%) rotate(45deg);
+    -moz-transform: translateX(100%) translateY(-100%) rotate(45deg);
+    -o-transform: translateX(100%) translateY(-100%) rotate(45deg);
+    -webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+    transition: transform 2.5s;
+    -webkit-transition: -webkit-transform 0.3s;
+    pointer-events: none; }
+  .pace.pace-active .pace-activity {
+    transform: translateX(50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(50%) translateY(-50%) rotate(45deg);
+    -o-transform: translateX(50%) translateY(-50%) rotate(45deg);
+    -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg); }
+  .pace .pace-activity::before, .pace .pace-activity::after {
+    content: '';
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    display: block;
+    border: 5px solid var(--mainSnow);
+    border-radius: 50%; }
+  .pace .pace-activity::before {
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-right-color: rgba(0, 0, 0, 0.2);
+    border-left-color: rgba(0, 0, 0, 0.2);
+    animation: pace-theme-corner-indicator-spin 8s linear infinite;
+    -webkit-animation: pace-theme-corner-indicator-spin 8s linear infinite; }
+  .pace .pace-activity::after {
+    bottom: 50px;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    border-top-color: rgba(0, 0, 0, 0.2);
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    animation: pace-theme-corner-indicator-spin 1.2s linear infinite;
+    -webkit-animation: pace-theme-corner-indicator-spin 1.2s linear infinite; }
+
+@keyframes pace-theme-corner-indicator-spin {
+  0% {
+    -transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  100% {
+    transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg); } }
+
+@keyframes pace-theme-corner-indicator-spin {
+  0% {
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  100% {
+    transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -webkit-transform: rotate(359deg); } }
+
+/* Efeito de Instrução Flecha */
+@keyframes swing {
+  15% {
+    transform: translateX(25px);
+    -moz-transform: translateX(25px);
+    -o-transform: translateX(25px);
+    -webkit-transform: translateX(25px); }
+  30% {
+    transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+    -webkit-transform: translateX(-10px); }
+  50% {
+    transform: translateX(6px);
+    -moz-transform: translateX(6px);
+    -o-transform: translateX(6px);
+    -webkit-transform: translateX(6px); }
+  65% {
+    transform: translateX(-6px);
+    -moz-transform: translateX(-6px);
+    -o-transform: translateX(-6px);
+    -webkit-transform: translateX(-6px); }
+  80% {
+    transform: translateX(4px);
+    -moz-transform: translateX(4px);
+    -o-transform: translate(4px);
+    -webkit-transform: translateX(4px); }
+  100% {
+    transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -webkit-transform: translateX(0px); } }
+
+/* Animação Tênis Flutuante */
+@keyframes animationFloat {
+  50% {
+    transform: translateY(-60px); }
+  100% {
+    transform: translateY(0px); } }
+
+/* Animação Container Fixo Subindo */
+@keyframes top {
+  from {
+    bottom: -190px; }
+  to {
+    transform: translateY(0px); } }
+
+/* Container */
+.x-container {
+  position: absolute;
+  margin-top: 0px;
+  width: 100%;
+  height: auto;
+  background: var(--mainDarkness);
+  /* Container Promoção Rodapé */
+  /* Container Barra Progresso */
+  /* Container Barra Progresso - Barra */ }
+  .x-container .x-content-Promotion {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 25px;
+    background: #222;
+    animation: top 3s;
+    z-index: 999;
+    /* Container Promoção Rodapé - Imagem */
+    /* Container Promoção Rodapé - Texto */ }
+    .x-container .x-content-Promotion img {
+      position: relative;
+      top: -162px;
+      left: -1.5px;
+      transform: rotate(48deg);
+      -moz-transform: rotate(48deg);
+      -o-transform: rotate(48deg);
+      -webkit-transform: rotate(48deg);
+      z-index: 99; }
+    .x-container .x-content-Promotion #info-product {
+      position: absolute;
+      top: 2%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: var(--mainBoldGray); }
+  .x-container .x-progress-Container {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: #444;
+    z-index: 9999; }
+  .x-container .x-progress-bar {
+    height: 3px;
+    background: var(--mainRed);
+    opacity: .85;
+    width: 0%; }
+
+/* Carrinho Compras */
+.x-shopping-Cart {
+  position: fixed;
+  right: -325px;
+  width: 325px;
+  height: 100vh;
+  background: #222;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  -webkit-transition: 0.6s;
+  z-index: 999;
+  /* Carrinho Comprar - Imagem Fechar */
+  /* Carrinho Compras - Container */ }
+  .x-shopping-Cart #image-close-cart {
+    float: right;
+    cursor: pointer; }
+  .x-shopping-Cart .x-cart {
+    margin: 70px 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    /* Carrinho Compras - Texto Título */
+    /* Carrinho Compras - Imagem Bandeira Cartão */
+    /* Carrinho Compras - Texto Tìtulo Campos */
+    /* Carrinho Compras - Campos */
+    /* Carrinho Compras - Botão Comprar */
+    /* Carrinho Compras - Container Total */ }
+    .x-shopping-Cart .x-cart #text-title-details {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: var(--mainSnow); }
+    .x-shopping-Cart .x-cart img {
+      float: right;
+      margin: -60px 60px;
+      width: 70px;
+      cursor: pointer; }
+    .x-shopping-Cart .x-cart .text-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: var(--mainLightGray); }
+    .x-shopping-Cart .x-cart .fields {
+      width: 300px;
+      height: 25px;
+      background: none;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid var(--mainDark);
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      color: var(--mainRed);
+      transition: 0.5s; }
+      .x-shopping-Cart .x-cart .fields:focus {
+        border-bottom: 1px solid var(--mainSnow); }
+    .x-shopping-Cart .x-cart #expiration,
+    .x-shopping-Cart .x-cart #cvv {
+      width: 150px; }
+    .x-shopping-Cart .x-cart #btn-next {
+      margin: 20px 0px;
+      width: 100px;
+      height: 30px;
+      background: none;
+      border: 2px solid var(--mainDark);
+      outline: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #666;
+      transition: 0.5s;
+      cursor: pointer; }
+      .x-shopping-Cart .x-cart #btn-next:hover {
+        border: 2px solid var(--mainLightGray);
+        color: var(--mainLightGray); }
+    .x-shopping-Cart .x-cart .x-total {
+      margin: 30px 0px;
+      padding: 10px;
+      width: 100%;
+      height: 75px;
+      /* Container Total - Linha */
+      /* Container Total - Texto Título */
+      /* Container Total - Texto Total */ }
+      .x-shopping-Cart .x-cart .x-total .line {
+        float: right;
+        width: 200px;
+        border: 0.5px solid #555; }
+      .x-shopping-Cart .x-cart .x-total #title-total {
+        float: right;
+        margin: 10px 35px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--mainBoldGray); }
+      .x-shopping-Cart .x-cart .x-total #total {
+        float: right;
+        margin: 30px -145px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--mainBoldGray); }
+
+/* Container Carrinho de Compras */
+.x-bag {
+  position: fixed;
+  right: -147px;
+  width: 110px;
+  height: 100vh;
+  background: #4B4B4B;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+  transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  -webkit-transition: 0.7s;
+  z-index: 99;
+  cursor: crosshair;
+  overflow-x: scroll;
+  /* Container Carrinho de Compras - Armazenador */
+  /* Container Carrinho de Compras - Imagem */ }
+  .x-bag .x-message-buy {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    .x-bag .x-message-buy .message {
+      padding-top: 40px;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 12px;
+      text-align: center;
+      color: #999; }
+    .x-bag .x-message-buy #icon-box {
+      width: 50px; }
+  .x-bag li {
+    list-style-type: none;
+    position: relative;
+    top: -2px;
+    padding-bottom: 90px; }
+  .x-bag img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 101px; }
+
+/* Container Central */
+.x-central-Content {
+  margin: 35px auto;
+  width: 960px;
+  height: 5135px;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.95);
+  background: var(--mainDarkness);
+  overflow: hidden;
+  /* Menú */
+  /* Animation Pulse Button Green */
+  /* Container Produto */
+  /* Apresentação Produto Zoom */
+  /* Galeria Produto */
+  /* Apresentação Produto Zoom */
+  /* Avaliações Produto */
+  /* Comentários */
+  /* Sobre Produto */
+  /* Sobre Produto */
+  /* Touch Slider Produto */
+  /* Rodapé */ }
+  .x-central-Content .x-content-Menu {
+    width: 100%;
+    height: auto;
+    /* Menú Logomarca */
+    /* Menú - Posição Opções */ }
+    .x-central-Content .x-content-Menu .x-brand img {
+      margin: -15px 30px;
+      width: 120px;
+      cursor: pointer; }
+    .x-central-Content .x-content-Menu nav ul#menu {
+      display: flex;
+      margin: -105px 5px;
+      float: right;
+      list-style: none;
+      /* Menú - Espaçamento Opções */ }
+      .x-central-Content .x-content-Menu nav ul#menu li {
+        margin: 30px 5px;
+        cursor: pointer;
+        /* Menú - Imagem Opções */ }
+        .x-central-Content .x-content-Menu nav ul#menu li img {
+          width: 25px; }
+        .x-central-Content .x-content-Menu nav ul#menu li #count-bag {
+          position: relative;
+          bottom: 10px;
+          right: 8px;
+          width: 20px;
+          height: 20px;
+          background: #3e3e3e;
+          border-radius: 50%;
+          animation: pulseGrey 1.25s linear infinite;
+          -moz-animation: pulseGrey 1.25s linear infinite;
+          -o-animation: pulseGrey 1.25s linear infinite;
+          -webkit-animation: pulseGrey 1.25s linear infinite; }
+          .x-central-Content .x-content-Menu nav ul#menu li #count-bag #count {
+            position: relative;
+            bottom: 2px;
+            left: 6px;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #999; }
+
+@keyframes pulseGrey {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(102, 102, 102, 0.93); }
+  40% {
+    box-shadow: 0px 0px 0px 7px rgba(102, 102, 102, 0.93); }
+  80% {
+    box-shadow: 0px 0px 0px 7px rgba(102, 102, 102, 0); }
+  100% {
+    box-shadow: 0px 0px 0px 0px rgba(102, 102, 102, 0); } }
+  .x-central-Content .x-content-Product {
+    margin: -10px -15px;
+    width: 103%;
+    height: 450px;
+    background: #222;
+    transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    /* Slide Produto */
+    /* Slide - Descrição Produto */ }
+    .x-central-Content .x-content-Product .x-content-slide-product {
+      position: relative;
+      top: 50px;
+      left: 65px;
+      transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      -webkit-transform: rotate(3deg);
+      width: auto;
+      height: auto;
+      /* Slide - Posição Produto */
+      /* Slide - Box Maior Produto */ }
+      .x-central-Content .x-content-Product .x-content-slide-product ul#slide {
+        margin: 0px -10px;
+        padding: 0px;
+        float: left;
+        list-style: none;
+        /* Slide - Container Miniatura Produto */ }
+        .x-central-Content .x-content-Product .x-content-slide-product ul#slide li {
+          margin: 5px;
+          width: 85px;
+          height: 85px;
+          border: 1px solid #444;
+          border-radius: 8px;
+          /* Slide - Container Miniatura Imagem Produto */ }
+          .x-central-Content .x-content-Product .x-content-slide-product ul#slide li img {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            width: 100%;
+            opacity: 1;
+            z-index: 9999;
+            cursor: grab; }
+      .x-central-Content .x-content-Product .x-content-slide-product .x-box-product {
+        margin-left: 15px;
+        float: left;
+        width: 370px;
+        height: 370px;
+        border: 1px solid #444;
+        /* Slide - Box Imagem Produto */ }
+        .x-central-Content .x-content-Product .x-content-slide-product .x-box-product img {
+          width: 100%;
+          cursor: zoom-in;
+          cursor: -moz-zoom-in;
+          cursor: -webkit-zoom-in;
+          /*  Slide - Box Animação Imagem Produto */ }
+          .x-central-Content .x-content-Product .x-content-slide-product .x-box-product img:hover {
+            transform: scale(1.04);
+            -moz-transform: scale(1.04);
+            -o-transform: scale(1.04);
+            -webkit-transform: scale(1.04); }
+    .x-central-Content .x-content-Product .x-content-description-product {
+      position: relative;
+      float: right;
+      right: 110px;
+      margin: -18px 0;
+      width: 350px;
+      height: 400px;
+      /* Slide - Texto Nome Produto */
+      /* Slide - Texto Descrição Produto */
+      /* Slide - Texto Preço Produto */ }
+      .x-central-Content .x-content-Product .x-content-description-product #text-name-product {
+        margin: 40px 0;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 31.8px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: end;
+        text-shadow: 1px 4px var(--mainDarker);
+        color: #444; }
+      .x-central-Content .x-content-Product .x-content-description-product #text-description-product {
+        position: relative;
+        top: -15px;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 13px;
+        text-align: end;
+        color: var(--mainBoldGray); }
+      .x-central-Content .x-content-Product .x-content-description-product #text-price-product {
+        position: relative;
+        font-family: 'Titillium Web', sans-serif;
+        top: -35px;
+        text-align: end;
+        font-size: 18px;
+        color: var(--mainBoldGray); }
+  .x-central-Content .x-content-zoom1-Product {
+    margin: 70px 0;
+    width: 100%;
+    height: 525px;
+    background: var(--mainDarkness);
+    /* Zoom - Texto */
+    /* Zoom - Imagem */ }
+    .x-central-Content .x-content-zoom1-Product #text-air-max,
+    .x-central-Content .x-content-zoom1-Product .ityped {
+      margin: 0px 130px;
+      font-family: 'Anton', sans-serif;
+      font-size: 165px;
+      color: #1B1B1B;
+      line-height: 165px;
+      text-shadow: 2px 4px rgba(0, 0, 0, 0.4); }
+    .x-central-Content .x-content-zoom1-Product .x-air-max {
+      position: absolute;
+      margin: 0;
+      top: 940px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      align-content: center;
+      align-items: center;
+      /* Zoom - Container Espelho Imagem */
+      /* Zoom - Espelho */
+      /* Zoom - Instrução */ }
+      .x-central-Content .x-content-zoom1-Product .x-air-max .x-air-max-glass {
+        position: relative; }
+      .x-central-Content .x-content-zoom1-Product .x-air-max .x-glass {
+        position: absolute;
+        right: 20px;
+        width: 165px;
+        height: 310px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+        z-index: 99;
+        cursor: none; }
+      .x-central-Content .x-content-zoom1-Product .x-air-max .x-air-max-instruction {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        align-items: center;
+        align-content: center;
+        /* Zoom - Imagem Instrução */
+        /* Zoom - Texto Instrução */ }
+        .x-central-Content .x-content-zoom1-Product .x-air-max .x-air-max-instruction .x-icon-sides {
+          position: absolute;
+          top: 40px;
+          animation: swing 2s ease infinite;
+          -moz-animation: swing 2s infinite;
+          -o-animation: swing 2s infinite;
+          -webkit-animation: swing 2s infinite;
+          cursor: pointer; }
+        .x-central-Content .x-content-zoom1-Product .x-air-max .x-air-max-instruction #text-instruction {
+          position: relative;
+          top: 65px;
+          left: -20px;
+          font-family: 'Titillium Web', sans-serif;
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          color: #1B1B1B; }
+  .x-central-Content .x-gallery-Product {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    /* Galeria Produto - Grid */ }
+    .x-central-Content .x-gallery-Product .x-grid-gallery {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 0;
+      /* Galeria Produto - Formatação Imagens */
+      /* Galeria Produto - Imagem 1 */
+      /* Galeria Produto - Imagem 2 */
+      /* Galeria Produto - Imagem 3 */ }
+      .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-one,
+      .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-two,
+      .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-three {
+        width: 450px;
+        height: 280px;
+        transition: 0.6s;
+        -moz-transition: 0.6s;
+        -o-transition: 0.6s;
+        -webkit-transition: 0.6s; }
+      .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-one {
+        position: relative;
+        top: 70px;
+        border-radius: 0px 12px 0px 0px; }
+        .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-one:hover {
+          transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          filter: grayscale(60%);
+          -ms-filter: grayscale(60%);
+          -webkit-filter: grayscale(60%); }
+      .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-two {
+        position: relative;
+        top: 165px;
+        left: -50px;
+        width: 580px;
+        height: 350px;
+        border-radius: 12px 0px 0px 12px; }
+        .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-two:hover {
+          transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          filter: grayscale(60%);
+          -ms-filter: grayscale(60%);
+          -webkit-filter: grayscale(60%); }
+      .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-three {
+        position: relative;
+        top: 350px;
+        left: -1030px;
+        border-radius: 0px 12px 12px 0px; }
+        .x-central-Content .x-gallery-Product .x-grid-gallery #image-gallery-three:hover {
+          transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          filter: grayscale(60%);
+          -ms-filter: grayscale(60%);
+          -webkit-filter: grayscale(60%); }
+  .x-central-Content .x-content-zoom2-Product {
+    margin-top: 70px;
+    width: 100%;
+    height: 600px;
+    /* Zoom - Texto */
+    /* Zoom - Imagem */ }
+    .x-central-Content .x-content-zoom2-Product #text-air-max,
+    .x-central-Content .x-content-zoom2-Product .ityp {
+      margin: 0px 130px;
+      font-family: 'Anton', sans-serif;
+      font-size: 165px;
+      color: #1B1B1B;
+      line-height: 165px;
+      text-shadow: 2px 4px rgba(0, 0, 0, 0.4); }
+    .x-central-Content .x-content-zoom2-Product .x-air-max {
+      position: absolute;
+      top: 44%;
+      margin: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      align-content: center;
+      align-items: center;
+      /* Zoom - Container Espelho Imagem */
+      /* Zoom - Espelho */
+      /* Zoom - Instrução */ }
+      .x-central-Content .x-content-zoom2-Product .x-air-max .x-air-max-glass {
+        position: relative; }
+      .x-central-Content .x-content-zoom2-Product .x-air-max .x-glass {
+        position: absolute;
+        top: 20px;
+        right: -10px;
+        width: 165px;
+        height: 310px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+        z-index: 99;
+        cursor: none; }
+      .x-central-Content .x-content-zoom2-Product .x-air-max .x-air-max-instruction {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        align-items: center;
+        align-content: center;
+        /* Zoom - Imagem Instrução */
+        /* Zoom - Texto Instrução */ }
+        .x-central-Content .x-content-zoom2-Product .x-air-max .x-air-max-instruction .x-icon-sides {
+          position: absolute;
+          top: 40px;
+          animation: swing 2s ease infinite;
+          -moz-animation: swing 2s infinite;
+          -o-animation: swing 2s infinite;
+          -webkit-animation: swing 2s infinite;
+          cursor: pointer; }
+        .x-central-Content .x-content-zoom2-Product .x-air-max .x-air-max-instruction #text-instruction {
+          position: relative;
+          top: 65px;
+          left: -20px;
+          font-family: 'Titillium Web', sans-serif;
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          color: #1B1B1B; }
+  .x-central-Content .x-content-avaliations-Product {
+    width: 100%;
+    height: 560px;
+    background: #1C1C1C;
+    opacity: .9;
+    /* Avaliações */ }
+    .x-central-Content .x-content-avaliations-Product .x-avaliations {
+      position: relative;
+      float: left;
+      width: 300px;
+      height: 100%;
+      /* Avaliações - Resultados */
+      /* Clientes */ }
+      .x-central-Content .x-content-avaliations-Product .x-avaliations .x-rating {
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        background: var(--mainRed);
+        /* Avaliações - Texto Total Pontuação */
+        /* Avaliações - Texto Total Estrelas */
+        /* Avaliações - Texto Total Comentários */ }
+        .x-central-Content .x-content-avaliations-Product .x-avaliations .x-rating #text-total-rating {
+          margin: 0px 50px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 63px;
+          font-weight: bold;
+          color: var(--mainDarker); }
+        .x-central-Content .x-content-avaliations-Product .x-avaliations .x-rating #text-star-rating {
+          margin: -70px 158px;
+          font-size: 20px; }
+        .x-central-Content .x-content-avaliations-Product .x-avaliations .x-rating #text-comments-rating {
+          position: relative;
+          top: 52px;
+          left: 155px;
+          font-family: 'Titillium Web', sans-serif;
+          font-size: 12px;
+          font-weight: bold;
+          color: var(--mainDarker); }
+      .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients {
+        margin-top: 150px;
+        width: 100%;
+        /* Clientes */
+        /* Clientes - Texto Porcentagem */
+        /* Clientes - Texto Recomendação */ }
+        .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients .x-progress {
+          box-sizing: border-box;
+          margin: 20px 0px;
+          width: 100%;
+          /* Clientes - Texto Estrelas & Total Estrelas */
+          /* Clientes - Posicionamento Texto Total Estrelas */
+          /* Clientes - Barra Progresso */ }
+          .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients .x-progress .text-star,
+          .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients .x-progress .text-total-star {
+            margin: 0px 0px 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--mainBoldGray); }
+          .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients .x-progress .text-total-star {
+            position: relative;
+            top: -30px;
+            float: right; }
+          .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients .x-progress .x-bar {
+            box-sizing: border-box;
+            margin: 0px 10px;
+            width: 93%;
+            height: 4px;
+            background: var(--mainBoldGray);
+            /* Clientes Barra Progresso Real */ }
+            .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients .x-progress .x-bar .x-level-bar {
+              width: 100%;
+              height: 4px;
+              background: var(--mainRed); }
+        .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients #text-percent {
+          margin: 15px 95px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 60px;
+          font-weight: bold;
+          color: var(--mainDarker); }
+        .x-central-Content .x-content-avaliations-Product .x-avaliations .x-progress-clients #text-clients {
+          margin: -25px 0;
+          font-family: 'Titillium Web', sans-serif;
+          font-size: 14px;
+          font-weight: bold;
+          text-align: center;
+          color: #999; }
+  .x-central-Content .x-comments {
+    float: right;
+    margin-right: 30px;
+    width: 620px;
+    height: 100%;
+    overflow: hidden;
+    /* Comentários - Navegador */
+    /* Comentários - Clientes */ }
+    .x-central-Content .x-comments nav {
+      width: 100%;
+      height: 100%;
+      /* Comentários - Ordenação Navegador */ }
+      .x-central-Content .x-comments nav ul {
+        list-style: none;
+        /* Comentários -  */ }
+        .x-central-Content .x-comments nav ul li {
+          float: left;
+          /* Comentários - Botões */
+          /* Comentários - Radio Button */ }
+          .x-central-Content .x-comments nav ul li label {
+            display: block;
+            width: 156px;
+            padding: 15px;
+            border: 1px solid #CCC;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #999;
+            cursor: pointer; }
+          .x-central-Content .x-comments nav ul li .navegation {
+            display: none;
+            /* Comentários - Ativar Comentário */ }
+            .x-central-Content .x-comments nav ul li .navegation:checked ~ .x-content-comments {
+              display: block; }
+    .x-central-Content .x-comments .x-content-comments {
+      display: none;
+      position: absolute;
+      margin-top: 5px;
+      left: 41.2%;
+      width: 530px;
+      height: 460px;
+      /* Comentários Clientes - Texto Estrelas */
+      /* Comentários Clientes - Texto Título */
+      /* Comentários Clientes - Texto Comentário */
+      /* Comentários Clientes - Texto Nome CLiente */
+      /* Comentários Clientes - Linha */ }
+      .x-central-Content .x-comments .x-content-comments .text-star {
+        font-size: 18px;
+        color: var(--mainBoldGray); }
+      .x-central-Content .x-comments .x-content-comments .text-title {
+        margin: -10px 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: var(--mainBoldGray); }
+      .x-central-Content .x-comments .x-content-comments .text-comment {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: var(--mainBoldGray); }
+      .x-central-Content .x-comments .x-content-comments .text-name-client {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        color: var(--mainBoldGray); }
+      .x-central-Content .x-comments .x-content-comments .line {
+        border: 0.5px solid #444; }
+  .x-central-Content .x-about1-Product {
+    margin: 70px 0;
+    width: 78%;
+    height: 430px;
+    border-radius: 0px 300px 300px 0px;
+    background: #222;
+    /* Sobre Produto - Texto Linha */
+    /* Sobre Produto - Grid */
+    /* Sobre Produto - Imagem */ }
+    .x-central-Content .x-about1-Product .text-row-about {
+      position: relative;
+      top: 70px;
+      left: 15px;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 14px;
+      text-align: justify;
+      text-indent: 40px;
+      color: var(--mainLightGray);
+      width: 84%;
+      opacity: .5 !important; }
+    .x-central-Content .x-about1-Product .x-grid-about {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 15px;
+      width: 90%;
+      /* Sobre Produto - Texto Coluna */ }
+      .x-central-Content .x-about1-Product .x-grid-about .text-col-about {
+        margin: 90px 0 0 20px;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 14px;
+        text-align: justify;
+        color: var(--mainLightGray);
+        opacity: .5; }
+    .x-central-Content .x-about1-Product img {
+      margin: -150px 460px;
+      animation: animationFloat 1.5s infinite; }
+  .x-central-Content .x-about2-Product {
+    margin: 320px 240px;
+    width: 75%;
+    height: 450px;
+    border-radius: 300px 0px 0px 300px;
+    background: #222;
+    /* Sobre Produto - Mais Detalhes */
+    /* Sobre Produto - Imagem */ }
+    .x-central-Content .x-about2-Product .x-more-details {
+      position: relative;
+      top: 60px;
+      left: 90px;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 14px;
+      text-align: justify;
+      color: var(--mainLightGray);
+      opacity: .5;
+      /* Sobre Produto - Texto Opacidade */ }
+      .x-central-Content .x-about2-Product .x-more-details ul li {
+        opacity: .5; }
+    .x-central-Content .x-about2-Product img {
+      margin: -380px -205px;
+      width: 450px;
+      animation: animationFloat 1.5s infinite; }
+  .x-central-Content .x-touch-slide-Product {
+    position: relative;
+    top: -200px;
+    width: 102%;
+    height: 300px;
+    overflow: hidden;
+    /* Touch Slider Produto - Container */ }
+    .x-central-Content .x-touch-slide-Product .x-wrap-product {
+      display: flex;
+      margin-left: 1%;
+      width: 122%;
+      height: 100%;
+      /* Touch Slider Produto - Bloco Imagens */
+      /* Touch Slider Produto - Imagens */ }
+      .x-central-Content .x-touch-slide-Product .x-wrap-product .x-block-product {
+        display: flex;
+        transform: scale(0.97);
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        /* Touch Slider Produto - Container Imagens */ }
+        .x-central-Content .x-touch-slide-Product .x-wrap-product .x-block-product .x-product {
+          display: block;
+          max-width: 80%; }
+      .x-central-Content .x-touch-slide-Product .x-wrap-product img {
+        display: block;
+        width: 240px;
+        height: auto;
+        opacity: 1;
+        transition: .4s;
+        cursor: zoom-in;
+        cursor: -moz-zoom-in;
+        cursor: -webkit-zoom-in; }
+        .x-central-Content .x-touch-slide-Product .x-wrap-product img:hover {
+          width: 310px; }
+  .x-central-Content .x-Footer {
+    margin: -130px 0;
+    width: 100%;
+    height: 260px;
+    background: #222;
+    /* Rodapé - Logomarca */
+    /* Rodapé - Texto */
+    /* Rodapé - Linha */
+    /* Rodapé - Desenvolvedor */ }
+    .x-central-Content .x-Footer img {
+      position: relative;
+      float: right;
+      top: -20px;
+      right: 40px;
+      cursor: pointer; }
+    .x-central-Content .x-Footer .text-footer {
+      position: relative;
+      margin: 0px;
+      top: 85px;
+      left: 50px;
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 12px;
+      text-align: center;
+      color: var(--mainLightGray);
+      opacity: .6 !important; }
+    .x-central-Content .x-Footer .line {
+      position: relative;
+      top: 90px;
+      left: 65px;
+      width: 80%;
+      border: 0.3px solid #3A3A3A; }
+    .x-central-Content .x-Footer .x-developer {
+      position: relative;
+      top: 75px;
+      left: 90px;
+      /* Rodapé - Texto Desenvolvedor */ }
+      .x-central-Content .x-Footer .x-developer a {
+        font-family: 'Pacifico', cursive;
+        font-size: 14px;
+        text-align: center;
+        text-decoration: none;
+        color: var(--mainBoldGray);
+        cursor: pointer; }
+
+/* Seleção do Mouse */
+::selection {
+  background: #999; }
+
+-moz::selection {
+  background: #999; }
+
+-o::selection {
+  background: #999; }
+
+-webkit::selection {
+  background: #999; }

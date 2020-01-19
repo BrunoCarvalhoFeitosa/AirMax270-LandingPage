@@ -1,0 +1,856 @@
+@media screen and (max-width: 1024px) {
+
+    /* Rodapé */
+    .x-Footer {
+        height: 280px !important;
+
+        /* Rodapé - Linha */
+        .line {
+            margin-left: 45px;
+        }
+
+        /* Rodapé Desenvolvedor */
+        .x-developer p {
+            position: relative;
+            left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Container Central */
+    .x-central-Content {
+        width: 720px !important;
+        height: 5180px !important;
+
+        /* Container Produto */
+        .x-content-Product {
+            width: 105% !important;
+            margin: 10px -15px !important;
+
+            /* Slide - Container Miniatura Produto */
+            ul#slide {
+                li {
+                    width: 72px !important;
+                    height: 72px !important;
+                }
+            }
+
+            /* Slide - Box Maior Produto */
+            .x-box-product {
+                margin-top: 15px;
+                width: 290px !important;
+                height: 290px !important;
+            }
+
+            /* Slide - Descrição Produto */
+            .x-content-description-product {
+                width: 260px !important;
+
+                /* Slide - Texto Nome Produto */
+                #text-name-product {
+                    font-size: 22px !important;
+                }
+
+                /* Slide - Texto Descrição Produto */
+                #text-description-product {
+                    font-size: 12px !important;
+                }
+            }
+        }
+
+        /* Galeria Produto - Formatação Imagens */
+        #image-gallery-one,
+        #image-gallery-two,
+        #image-gallery-three {
+            width: 390px !important;
+            height: 260px !important;
+        }
+
+        /* Galeria Produto - Imagem 3 */
+        #image-gallery-one {
+            top: 80px !important;
+        }
+
+        /* Galeria Produto - Imagem 3 */
+        #image-gallery-three {
+            top: 340px !important;
+            left: -780px !important;
+        }
+    }
+
+    /* Comentários */
+    .x-comments {
+        width: 380px !important;
+        margin-right: 20px !important;
+
+        /* Comentários - Botões */
+        nav ul li label {
+            position: relative;
+            right: 20px;
+            width: 81px !important;
+            font-size: 12px !important;
+        }
+
+        /* Comentários - Clientes */
+        .x-content-comments {
+            left: 45% !important;
+            width: 380px !important;
+
+            /* Comentários Clientes - Texto Título */
+            .text-title {
+                font-size: 13px !important;
+            }
+        }
+    }
+
+    /* Sobre Produto */
+    .x-about1-Product {
+        width: 82% !important;
+
+        /* Sobre Produto - Texto Linha */
+        .text-row-about {
+            font-size: 12px !important;
+        }
+
+        /* Sobre Produto - Grid */
+        .x-grid-about {
+            grid-gap: 8px !important;
+
+            /* Sobre Produto - Texto Coluna */
+            .text-col-about {
+                margin: 90px 0 0 14px !important;
+                font-size: 12px !important;
+            }
+        }
+
+        /* Sobre Produto - Imagem */
+        img {
+            margin: -120px 260px !important;
+            width: 470px;
+        }
+    }
+
+    /* Sobre Produto */
+    .x-about2-Product {
+        width: 80% !important;
+
+        /* Sobre Produto - Mais Detalhes */
+        .x-more-details {
+            font-size: 12px !important;
+        }
+    }
+
+    /* Rodapé */
+    .x-Footer {
+
+        /* Rodapé - Linha */
+        .line {
+            top: 20px !important;
+            left: 80px !important;
+        }
+
+        /* Rodapé - Desenvolvedor */
+        .x-developer {
+            top: 10px !important;
+            left: 110px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    /* Container Promoção Rodapé */
+    .x-content-Promotion {
+
+        /* Container Promoção Rodapé - Texto */
+        #info-product {
+            top: 3px !important;
+            left: 205px !important;
+            font-size: 10.4px !important;
+        }
+
+        /* Container Promoção Rodapé - Imagem */
+        img {
+            top: -135px !important;
+            left: -6px !important;
+            width: 165px !important;
+        }
+    }
+
+    /* Carrinho Compras */
+    .x-shopping-Cart {
+        display: none;
+    }
+
+    /* Container Carrinho de Compras */
+    .x-bag {
+        display: none;
+    }
+
+    /* Container Central */
+    .x-central-Content {
+        width: 375px !important;
+        height: 5500px !important;
+
+        /* Container Produto */
+        .x-content-Product {
+            width: 112% !important;
+            height: 740px !important;
+            margin: -10px -20px !important;
+
+            /* Slide Produto */
+            .x-content-slide-product {
+
+                /* Slide - Posição Produto */
+                ul#slide {
+                    margin: 0px -15px !important;
+
+                    /* Slide - Container Miniatura Produto */
+                    li {
+                        width: 65px !important;
+                        height: 65px !important;
+                    }
+                }
+
+                /* Slide - Box Maior Produto */
+                .x-box-product {
+                    margin: 28px 21px !important;
+                    width: 261px !important;
+                    height: 230px !important;
+                }
+            }
+        }
+
+        /* Apresentação Produto Zoom */
+        .x-content-zoom1-Product {
+            height: 360px !important;
+
+            /* Zoom - Texto */
+            #text-air-max,
+            .ityped {
+                margin: 0 30px !important;
+                font-size: 90px !important;
+                line-height: 90px !important;
+            }
+
+            /* Zoom - Imagem */
+            #airOne {
+                margin-top: 360px;
+                width: 300px !important;
+            }
+
+            /* Zoom - Espelho */
+            .x-glass {
+                margin-top: 340px;
+                width: 105px !important;
+                height: 220px !important;
+            }
+
+            /* Zoom - Instrução */
+            .x-air-max-instruction {
+                left: 58% !important;
+            }
+        }
+
+        /* Galeria Produto */
+        .x-gallery-Product {
+            height: 780px !important;
+
+            /* Galeria Produto - Imagem 1 */
+            #image-gallery-one {
+                top: 0px !important;
+            }
+
+            /* Galeria Produto - Imagem 2 */
+            #image-gallery-two {
+                top: 260px !important;
+                left: -400px !important;
+            }
+
+            /* Galeria Produto - Imagem 3 */
+            #image-gallery-three {
+                top: 520px !important;
+            }
+        }
+
+        /* Apresentação Produto Zoom */
+        .x-content-zoom2-Product {
+            height: 420px !important;
+
+            /* Zoom - Texto */
+            #text-air-max,
+            .ityp {
+                margin: 0 30px !important;
+                font-size: 90px !important;
+                line-height: 90px !important;
+            }
+
+            /* Zoom - Imagem */
+            #airTwo {
+                margin-top: -100px !important;
+                margin-right: 40px;
+                width: 300px !important;
+            }
+
+            /* Zoom - Espelho */
+            .x-glass {
+                margin-top: -120px;
+                margin-right: 40px;
+                width: 105px !important;
+                height: 220px !important;
+            }
+
+            /* Zoom - Instrução */
+            .x-air-max-instruction {
+                left: 58% !important;
+            }
+        }
+
+        /* Avaliações Produto */
+        .x-content-avaliations-Product {
+            height: 1000px !important;
+
+            /* Avaliações */
+            .x-avaliations {
+                width: 100% !important;
+                height: 550px !important;
+
+                /* Avaliações - Resultados */
+                .x-rating {
+                    width: 100%;
+                    left: 0px;
+                }
+
+                /* Clientes - Texto Porcentagem */
+                #text-percent {
+                    margin: 15px 130px !important;
+                }
+            }
+
+            /* Comentários */
+            .x-comments {
+                float: none !important;
+                height: 600px !important;
+                background: #1F1F1F !important;
+
+                /* Comentários - Botões */
+                nav ul li label {
+                    position: relative;
+                    right: 26px;
+                    width: 81px !important;
+                    font-size: 11px !important;
+                }
+            }
+
+            /* Comentários - Clientes */
+            .x-content-comments {
+                width: 300px !important;
+                left: 10% !important;
+            }
+        }
+
+        /* Sobre Produto */
+        .x-about1-Product {
+            width: 88% !important;
+            margin: 240px -2px !important;
+
+            /* Sobre Produto - Texto Linha */
+            .text-row-about {
+                position: relative !important;
+                top: 100px !important;
+                width: 190px !important;
+            }
+
+            /* Sobre Produto - Grid */
+            .x-grid-about {
+                display: none !important;
+            }
+
+            /* Sobre Produto - Imagem */
+            img {
+                width: 290px;
+                margin: 40px 85px !important;
+            }
+        }
+
+        /* Sobre Produto */
+        .x-about2-Product {
+            margin: -80px 48px !important;
+            width: 88% !important;
+
+            /* Sobre Produto - Mais Detalhes */
+            .x-more-details {
+                left: 50px !important;
+                width: 230px;
+                font-size: 11px !important;
+            }
+
+            img {
+                margin: -230px -30px !important;
+                width: 265px !important;
+            }
+        }
+
+        /* Touch Slider Produto */
+        .x-touch-slide-Product {
+            width: 166% !important;
+            top: 120px !important;
+
+            /* Touch Slider Produto - Container */
+            .x-wrap-Product {
+                width: 166% !important;
+            }
+
+            /* Touch Slider Produto - Imagens */
+            img {
+                width: 150px !important;
+
+                &:hover {
+                    width: 310px;
+                }
+            }
+        }
+
+        /* Rodapé */
+        .x-Footer {
+            margin: 110px 0 !important;
+            height: 320px !important;
+
+            /* Rodapé - Logomarca */
+            img {
+                top: -5px !important;
+                right: 20px !important;
+                width: 100px !important;
+            }
+
+            /*  Rodapé - Texto */
+            .text-footer {
+                font-size: 11px !important;
+            }
+
+            /* Rodapé - Linha */
+            .line {
+                top: 50px !important;
+                left: 0px !important;
+            }
+
+            /* Rodapé - Desenvolvedor */
+            .x-developer {
+                top: 35px !important;
+                left: 26px !important;
+            }
+
+            /* Rodapé - Texto Desenvolvedor */
+            a {
+                font-size: 12px !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 375px) {
+
+    /* Container Promoção Rodapé */
+    .x-content-Promotion {
+
+        /* Container Promoção Rodapé - Texto */
+        #info-product {
+            top: 3px !important;
+            left: 205px !important;
+            font-size: 10.4px !important;
+        }
+
+        /* Container Promoção Rodapé - Imagem */
+        img {
+            top: -135px !important;
+            left: -6px !important;
+            width: 165px !important;
+        }
+    }
+
+    /* Carrinho Compras */
+    .x-shopping-Cart {
+        display: none;
+    }
+
+    /* Container Carrinho de Compras */
+    .x-bag {
+        display: none;
+    }
+
+    /* Container Central */
+    .x-central-Content {
+        width: 330px !important;
+
+        /* Container Produto */
+        .x-content-Product {
+            width: 112% !important;
+            height: 740px !important;
+            margin: -10px -20px !important;
+
+            /* Slide Produto */
+            .x-content-slide-product {
+
+                /* Slide - Posição Produto */
+                ul#slide {
+                    margin: 0px -23px !important;
+
+                    /* Slide - Container Miniatura Produto */
+                    li {
+                        width: 65px !important;
+                        height: 65px !important;
+                    }
+                }
+
+                /* Slide - Box Maior Produto */
+                .x-box-product {
+                    margin: 28px 28px !important;
+                    width: 230px !important;
+                    height: 230px !important;
+                }
+            }
+        }
+
+        /* Apresentação Produto Zoom */
+        .x-content-zoom1-Product {
+            height: 360px !important;
+
+            /* Zoom - Texto */
+            #text-air-max,
+            .ityped {
+                margin: 0 30px !important;
+                font-size: 90px !important;
+                line-height: 90px !important;
+            }
+
+            /* Zoom - Imagem */
+            #airOne {
+                margin-top: 360px;
+                width: 300px !important;
+            }
+
+            /* Zoom - Espelho */
+            .x-glass {
+                margin-top: 340px;
+                width: 105px !important;
+                height: 220px !important;
+            }
+
+            /* Zoom - Instrução */
+            .x-air-max-instruction {
+                left: 58% !important;
+            }
+        }
+
+        /* Galeria Produto */
+        .x-gallery-Product {
+            height: 780px !important;
+
+            /* Galeria Produto - Imagem 1 */
+            #image-gallery-one {
+                top: 0px !important;
+            }
+
+            /* Galeria Produto - Imagem 2 */
+            #image-gallery-two {
+                top: 260px !important;
+                left: -450px !important;
+            }
+
+            /* Galeria Produto - Imagem 3 */
+            #image-gallery-three {
+                top: 520px !important;
+            }
+        }
+
+        /* Apresentação Produto Zoom */
+        .x-content-zoom2-Product {
+            height: 420px !important;
+
+            /* Zoom - Texto */
+            #text-air-max,
+            .ityp {
+                margin: 0 30px !important;
+                font-size: 90px !important;
+                line-height: 90px !important;
+            }
+
+            /* Zoom - Imagem */
+            #airTwo {
+                margin-top: -100px !important;
+                margin-right: 40px;
+                width: 300px !important;
+            }
+
+            /* Zoom - Espelho */
+            .x-glass {
+                margin-top: -120px;
+                margin-right: 40px;
+                width: 105px !important;
+                height: 220px !important;
+            }
+
+            /* Zoom - Instrução */
+            .x-air-max-instruction {
+                left: 58% !important;
+            }
+        }
+
+        /* Avaliações Produto */
+        .x-content-avaliations-Product {
+            height: 1000px !important;
+
+            /* Avaliações */
+            .x-avaliations {
+                width: 330px !important;
+                height: 550px !important;
+
+                /* Avaliações - Resultados */
+                .x-rating {
+                    width: 100%;
+                    left: 0px;
+                }
+
+                /* Clientes - Texto Porcentagem */
+                #text-percent {
+                    margin: 15px 115px !important;
+                }
+            }
+
+            /* Comentários */
+            .x-comments {
+                float: none !important;
+                height: 600px !important;
+                background: #1F1F1F !important;
+
+                /* Comentários - Botões */
+                nav ul li label {
+                    position: relative;
+                    right: 26px;
+                    width: 69px !important;
+                    font-size: 11px !important;
+                }
+            }
+
+            /* Comentários - Clientes */
+            .x-content-comments {
+                width: 300px !important;
+                left: 10% !important;
+            }
+        }
+
+        /* Sobre Produto */
+        .x-about1-Product {
+            width: 88% !important;
+            margin: 240px 0px !important;
+
+            /* Sobre Produto - Texto Linha */
+            .text-row-about {
+                position: relative !important;
+                top: 100px !important;
+                width: 190px !important;
+            }
+
+            /* Sobre Produto - Grid */
+            .x-grid-about {
+                display: none !important;
+            }
+
+            /* Sobre Produto - Imagem */
+            img {
+                width: 290px;
+                margin: 40px 50px !important;
+            }
+        }
+
+        /* Sobre Produto */
+        .x-about2-Product {
+            margin: -80px 40px !important;
+            width: 88% !important;
+
+            /* Sobre Produto - Mais Detalhes */
+            .x-more-details {
+                left: 50px !important;
+                width: 230px;
+                font-size: 11px !important;
+            }
+
+            /* Sobre Produto - Imagem */
+            img {
+                margin: -230px -30px !important;
+                width: 250px !important;
+            }
+        }
+
+        /* Touch Slider Produto */
+        .x-touch-slide-Product {
+            top: 120px !important;
+            width: 200% !important;
+
+            /* Touch Slider Produto - Container */
+            .x-wrap-Product {
+                width: 200% !important;
+            }
+
+            /* Touch Slider Produto - Imagens */
+            img {
+                width: 150px !important;
+            }
+        }
+
+        /* Rodapé */
+        .x-Footer {
+            margin: 110px 0 !important;
+            height: 320px !important;
+
+            /* Rodapé - Logomarca */
+            img {
+                top: -5px !important;
+                right: 20px !important;
+                width: 100px !important;
+            }
+
+            /*  Rodapé - Texto */
+            .text-footer {
+                font-size: 11px !important;
+            }
+
+            /* Rodapé - Linha */
+            .line {
+                top: 50px !important;
+                left: 0px !important;
+            }
+
+            /* Rodapé - Desenvolvedor */
+            .x-developer {
+                top: 35px !important;
+                left: 26px !important;
+            }
+
+            /* Rodapé - Texto Desenvolvedor */
+            a {
+                font-size: 12px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    /* Container Promoção Rodapé */
+    .x-content-Promotion {
+        #info-product {
+            top: 5px !important;
+            left: 197px !important;
+            font-size: 8.4px !important;
+        }
+    }
+
+    /* Carrinho Compras */
+    .x-shopping-Cart {
+        display: none;
+    }
+
+    /* Container Carrinho de Compras */
+    .x-bag {
+        display: none;
+    }
+
+    /* Container Central */
+    .x-central-Content {
+        width: 300px !important;
+
+        /* Container Produto */
+        .x-content-Product {
+            width: 114% !important;
+
+            /* Slide Produto */
+            .x-content-slide-product {
+
+                /* Slide - Box Maior Produto */
+                .x-box-product {
+                    width: 186px !important;
+                    height: 228px !important;
+
+                    /* Slide - Box Imagem Produto */
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        /* Slide - Texto Nome Produto */
+        #text-name-product {
+            position: relative;
+            left: 11px;
+        }
+
+        /* Slide - Texto Descrição Produto */
+        #text-description-product {
+            left: 18px !important;
+        }
+
+        /* Sobre Produto - Imagem */
+        .x-about1-Product img {
+            margin: 40px 18px !important;
+        }
+
+        /* Galeria Produto - Imagem 1 */
+        #image-gallery-one {
+            width: 340px !important;
+        }
+
+        /* Galeria Produto - Imagem 2 e 3 */
+        #image-gallery-two,
+        #image-gallery-three {
+            width: 390px !important;
+        }
+
+        /* Avaliações Produto */
+        .x-content-avaliations-Product {
+
+            /* Avaliações */
+            .x-avaliations {
+
+                /* Clientes - Texto Porcentagem */
+                #text-percent {
+                    margin: 15px 92px !important;
+                }
+            }
+
+            /* Comentários */
+            .x-comments {
+
+                 /* Comentários - Botões */
+                nav ul li label {
+                    width: 58px !important;
+                    font-size: 9px !important;
+                }
+
+                /* Comentários - Clientes */
+                .x-content-comments {
+                    width: 260px !important;
+                }
+            }
+        }
+
+        /* Rodapé */
+        .x-Footer {
+
+            /* Rodapé - Texto */
+            .text-footer {
+                font-size: 9px !important;
+            }
+            
+            /* Rodapé - Linha */
+            .line {
+                top: 39px !important;
+                left: -15px !important;
+            }
+        }
+
+    }
+}
