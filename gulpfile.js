@@ -1,20 +1,21 @@
-let gulp = require('gulp');
-let pug = require('gulp-pug');
-let sass = require('gulp-sass');
-let cssmin = require('gulp-cssmin');
-let uglify = require('gulp-uglify');
-let stripCssComments = require('gulp-strip-css-comments');
-let imagemin = require('gulp-imagemin');
-let browserSync = require('browser-sync').create();
+// Variables
+const gulp = require('gulp');
+const pug = require('gulp-pug');
+const sass = require('gulp-sass');
+const cssmin = require('gulp-cssmin');
+const uglify = require('gulp-uglify');
+const stripCssComments = require('gulp-strip-css-comments');
+const imagemin = require('gulp-imagemin');
+const browserSync = require('browser-sync').create();
 
-//Tarefa para transformar todo .PUG em .HTML e transferir para uma pasta
+// Task to transform PUG in HTML
 gulp.task('pug', () => {
     return gulp.src('src/pug/*.pug')
         .pipe(pug())
         .pipe(gulp.dest('dist'));
 });
 
-//Tarefa para transformar .SCSS para .CSS
+// Task to transform SCSS in CSS
 gulp.task('sass', () => {
     return gulp.src('src/scss/*.scss')
         .pipe(sass())
@@ -22,25 +23,28 @@ gulp.task('sass', () => {
         .pipe(browserSync.stream());
 });
 
+// Task to minify CSS
 gulp.task('cssmin', () => {
     gulp.src('src/scss/*.scss')
         .pipe(cssmin())
         .pipe(gulp.dest('dist/assets/css'));
 });
 
+// Task to transformm ES6, ES7 in Vanilla Javascript
 gulp.task('uglifyJS', () => {
     gulp.src('src/js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
+// Task to remove comments of CSS
 gulp.task('stripe', () => {
     gulp.src('src/scss/*.scss')
         .pipe(stripCssComments())
         .pipe(gulp.dest('dist/assets/css'))
 });
 
-//Tarefa para minificar IMAGENS
+// Task to minify images
 gulp.task('imageMin', () => {
     gulp.src('src/assets/images/*')
         .pipe(imagemin())
@@ -58,14 +62,14 @@ gulp.task('imageMin', () => {
         ]))
 });
 
-//Tarefa para atualizar a página a cada salvamento
+// Task to build SCSS and JS files
 gulp.task('serve', ['sass', 'uglifyJS'], () => {
     browserSync.init({
         server: 'dist'
     })
 });
 
-//Tarefa para atualizar a cada save o .PUG em .HTML / .SCSS em .CSS e o .HTML
+// Task to build all file types and reload browser navigator
 gulp.task('watch', () => {
     gulp.watch('src/pug/*', ['pug']);
     gulp.watch('src/scss/*', ['sass']);
@@ -73,5 +77,5 @@ gulp.task('watch', () => {
     gulp.watch('dist/*.html').on('change', browserSync.reload);
 });
 
-//Tarefa para executar cada lote de tarefas
+// Default task to batch run task by task
 gulp.task('default', ['serve', 'pug', 'sass', 'cssmin', 'uglifyJS', 'stripe', 'imageMin', 'watch']);
